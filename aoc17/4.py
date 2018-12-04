@@ -77,4 +77,4 @@ for line in lines: #line: asdfawje fewaölfkjwe felwöjkfwö lökjfawe
 print('Part 2 : ' + str(valid_count))
 # 281: too high
 # 325: too high (duh)
-# 199 correct - how???
+# 199 correct
