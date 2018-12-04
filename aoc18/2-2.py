@@ -8,7 +8,7 @@ with open(dir_path + '/2-in.txt') as f:
 	
 num_two = 0
 num_three = 0
-#start = time.process_time()
+
 for i in range(0, len(lines)):
 	line = lines[i]
 	for j in range(0, len(lines)):
