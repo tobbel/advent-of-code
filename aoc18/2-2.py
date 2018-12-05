@@ -3,7 +3,7 @@ import time
 from string import ascii_lowercase
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
-with open(dir_path + '/2-in.txt') as f:
+with open(dir_path + 'input/2-in.txt') as f:
 	lines = f.read().splitlines()
 	
 num_two = 0

@@ -7,7 +7,7 @@ import time
 # Get problem: n.txt
 dir_path = os.path.dirname(os.path.realpath(__file__))
 problem_number = os.path.basename(__file__).split('.')[0][0]
-file_path = dir_path + '/' + problem_number + '-in.txt'
+file_path = dir_path + '/input/' + problem_number + '-in.txt'
 with open(file_path) as f:
 	lines = f.read().splitlines()
 
@@ -46,7 +46,7 @@ class Guard:
 		self.number = number
 		self.sleeping_minutes = []
 		for i in range(0, 59):
-			self.sleeping_minutes.append(0)
+			self.sleeping_minutes.append(i * 0)
 	
 	def start_sleeping(self, time):
 		self.sleep_start = time.split(':')[1]
