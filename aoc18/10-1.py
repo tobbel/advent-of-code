@@ -1,17 +1,13 @@
 
-'''
-'''
 import os 
 import time
 
-# Get problem: n.txt
 dir_path = os.path.dirname(os.path.realpath(__file__))
 problem_number = os.path.basename(__file__).split('.')[0][:2]
 file_path = dir_path + '/input/' + problem_number + '-in.txt'
 with open(file_path) as f:
   lines = f.read().splitlines()
 
-#start = time.process_time()
 
 class Point:
   def __init__(self, x, y, xv, yv):
@@ -27,12 +23,6 @@ def try_get_point(x, y):
     if p.x == x and p.y == y:
       return '#'
   return '.'
-  # #point = [p for p in points if p.x == x and p.y == y]
-  # if len(point) > 0:
-  #   return '#'
-  # else:
-  #   return '.'
-
 
 def print_points():
   min_x = min(points, key = lambda p : p.x).x
@@ -55,12 +45,14 @@ def accelerate():
     p.x += p.xv
     p.y += p.yv
 
+# Parse input
 for line in lines:
   line = line.split('> velocity=<')
   pos = line[0][10:].split(',')
   vel = line[1][:-1].split(',')
   points.append(Point(int(pos[0]), int(pos[1]), int(vel[0]), int(vel[1])))
 
+# Print and iterate, count seconds for part 2
 seconds = 0
 while True:
   printed = print_points()
@@ -70,7 +62,5 @@ while True:
     print('Took', seconds, 'seconds')
   accelerate()
 
-# RIF7NRAN wrong
-# RLEZNRAN - right?
-#end = time.process_time()
-#print(str(end-start))
+# RIF7NRAN: wrong
+# RLEZNRAN: right
