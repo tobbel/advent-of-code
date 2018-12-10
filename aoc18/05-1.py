@@ -50,6 +50,7 @@ while start_len != stop_len:
 
 # 35286: wrong
 # 33670: wrong
+# 10384: right!
 
 #end = time.process_time()
 #print(str(end-start))
